@@ -1,0 +1,36 @@
+.back {
+background-color: #006277;
+}
+.back2 {
+    background-color: #4543E8;
+    color: white;
+}
+.WtFt {
+    color: white;
+}
+.specBlue {
+    color: #4543E8;
+}
+h1 ,
+h2 
+ {
+    font-family:'Roboto' , sans-serif ;
+}
+h3 ,
+h4 ,
+h5 {
+    font-family: 'Epilogue' , sans-serif;
+}
+header {
+  
+height: 770px;
+left: 0%;
+right: 0%;
+top: 83px;
+}
+li {
+    display: inline-block;
+}
+li p {
+    display: inline-block;
+}
