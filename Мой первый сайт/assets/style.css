@@ -1,36 +1,274 @@
 .back {
-background-color: #006277;
+    background-color: #006277;
 }
+
 .back2 {
     background-color: #4543E8;
     color: white;
 }
+
 .WtFt {
     color: white;
 }
+
 .specBlue {
     color: #4543E8;
 }
-h1 ,
-h2 
- {
-    font-family:'Roboto' , sans-serif ;
+
+h1,
+h2,
+p {
+    font-family: 'Epiligue', sans-serif;
 }
-h3 ,
-h4 ,
+
+h3,
+h4,
 h5 {
-    font-family: 'Epilogue' , sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
-header {
-  
-height: 770px;
+
+/* header {
+  display: flex;
+height: auto;
 left: 0%;
 right: 0%;
 top: 83px;
+flex-direction: column; 
+}*/
+header {
+    padding: 14px 80px 10px;
+    background-color: #006277;
+    width: -webkit-fill-available;
 }
+
+.header {
+    padding: 13px 0;
+    padding-left: 80px;
+    /* display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center; */
+}
+
+header section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: -15px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 30px;
+}
+
+nav>h3 {
+    display: inline-block;
+}
+
+nav>div {
+    display: inline-block;
+    word-spacing: 20px;
+}
+
 li {
     display: inline-block;
 }
+
+li:nth-child(2) {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+li h1 {
+    font-size: 60px;
+    margin: 0 auto;
+}
+
+li img {
+    vertical-align: sub;
+}
+
 li p {
     display: inline-block;
+    vertical-align: super;
+}
+
+.I1 {
+    justify-content: flex-end;
+    align-self: flex-end;
+    max-height: 500px;
+    max-width: 50%;
+}
+
+#Prefooter {
+    display: flex;
+    max-height: 400px;
+    text-align: center;
+    padding: 0 auto;
+    margin: 0 auto;
+}
+
+#W {
+    background-image: url(./images/FootBeck.svg);
+
+}
+
+#Prefooter div {
+    width: 50%;
+    background-size: cover;
+    background-position: center;
+    padding: 6%;
+    max-height: 400px;
+}
+
+#Prefooter button {
+    border: none;
+    background: none;
+    color: white;
+    flex-direction: row;
+}
+
+button {
+    font-size: large;
+    font-family: 'Epilogue', sans-serif;
+}
+
+address {
+    display: flex;
+    justify-content: space-evenly;
+    font-style: normal;
+
+}
+
+address div {
+    flex-direction: column;
+    display: inline-flex;
+    line-height: 30px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Epilogue', sans-serif;
+}
+
+[alt="Kubok"] {
+    padding-right: 15px;
+}
+
+header section article {
+    width: 50%
+}
+
+header section article div:first-child {}
+
+header section article div:last-child {
+    display: flex;
+}
+
+header section article div div {
+    flex-direction: column;
+    line-height: 0px;
+}
+
+.BHF {
+    font-size: 70px;
+}
+
+#Services {
+    display: inline-grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: -webkit-fill-available;
+    gap: 50px;
+    padding: 100px;
+    font-size: 18px;
+}
+
+#Services h3 {
+    font-size: 24px;
+}
+
+#Services div:first-child h1 {
+    font-size: 48px;
+    margin: 0;
+}
+
+#Services div div {
+    display: flex;
+
+}
+
+[alt="Wave1"],
+[alt="Wave"] {
+    margin-right: 15px;
+}
+
+#About,
+#Work,
+#Blog,
+#Contact {
+    display: flex;
+}
+
+#About {
+    margin-bottom: 120px;
+}
+
+h1.About {
+    font-size: 48px;
+    margin: 0;
+    margin-bottom: 74px;
+}
+
+.About p {
+    font-size: 21px;
+}
+
+div.About:first-child {
+    max-width: 33%;
+}
+
+div.About:last-child {
+    max-width: 55%;
+    margin-left: 130px;
+}
+
+article.About {
+    padding: 50px;
+}
+
+.sheep {
+    display: flex;
+}
+
+.sheep p:first-child {
+    font-size: 16px;
+}
+
+.sheep p:last-child {
+    font-size: 10px;
+}
+
+[alt="My-Ex-Who"] {
+    margin-right: 15px;
+}
+
+main section article:first-child {
+    display: flex;
+}
+
+ul {
+    padding: 0;
+}
+
+button {
+    border-radius: 32px;
+    border: none;
+    height: 69px;
+
 }
