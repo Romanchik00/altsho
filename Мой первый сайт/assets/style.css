@@ -447,3 +447,28 @@ hr {
     width: 90%;
     mix-blend-mode: soft-light;
 }
+
+#Prefooter button:hover {
+    transform: scale(1.2);
+}
+
+div.Blog button:hover {
+    background-image: radial-gradient( white 65%, #4543E8);
+    border-bottom: none;
+}
+
+button.back2:hover {
+    background-image: radial-gradient( #4543E8 40%,white );
+    border: dotted;
+}
+
+button:hover {
+    border: solid;
+    font-weight: bold;
+    border-bottom: none;
+}
+
+a:hover {
+    font-weight: bold;
+}
+
