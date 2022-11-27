@@ -58,17 +58,54 @@ header section {
     margin-bottom: -15px;
 }
 
+header section article {
+    width: 50%
+}
+
+header section article>div:last-child {
+    display: flex;
+    margin: 50px 0;
+}
+
+header section article div div {
+    flex-direction: column;
+    line-height: 10px;
+    letter-spacing: 1px;
+}
+
+header section article div button {
+    margin: 20px 0;
+}
+
+header section article div h3 {
+    max-width: 50%;
+    line-height: 30px;
+}
+
 nav {
     display: flex;
     justify-content: space-between;
     padding-right: 30px;
 }
 
-nav>h3 {
-    display: inline-block;
+.butt {
+    width: 32px;
+    height: 32px;
+    background: #FFFFFF;
+    mix-blend-mode: normal;
+    box-shadow: inset 0px -4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 11px;
 }
 
-nav>div {
+nav div:first-child {
+    display: inline-grid;
+    grid-auto-flow: column;
+    align-items: center;
+    gap: 10px;
+    letter-spacing: 2px;
+}
+
+nav div:last-child {
     display: inline-block;
     word-spacing: 20px;
 }
@@ -78,8 +115,13 @@ li {
 }
 
 li:nth-child(2) {
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+li:nth-child(3) {
+    margin-left: 25px;
+    margin-right: 25px;
 }
 
 li h1 {
@@ -131,6 +173,14 @@ li p {
     flex-direction: row;
 }
 
+#Prefooter h2 {
+font-size: 24px;
+}
+
+#Prefooter h4 {
+font-size: 12px;
+}
+
 address {
     display: flex;
     justify-content: space-evenly;
@@ -154,19 +204,6 @@ a {
     padding-right: 15px;
 }
 
-header section article {
-    width: 50%
-}
-
-header section article div:last-child {
-    display: flex;
-}
-
-header section article div div {
-    flex-direction: column;
-    line-height: 0px;
-}
-
 .BHF {
     font-size: 70px;
 }
@@ -176,8 +213,9 @@ header section article div div {
     grid-template-columns: repeat(3, 1fr);
     width: -webkit-fill-available;
     gap: 50px;
-    padding: 100px;
     font-size: 18px;
+    padding: 80px;
+    margin: 40px;
 }
 
 #Services h3 {
@@ -202,6 +240,10 @@ header section article div div {
 
 }
 
+#Services button {
+    font-weight: bold;
+}
+
 [alt="Wave1"],
 [alt="Wave"] {
     margin-right: 15px;
@@ -212,6 +254,7 @@ header section article div div {
 #Blog,
 #Contact {
     display: flex;
+    margin-left: 80px;
 }
 
 #About {
@@ -261,7 +304,7 @@ main section article:first-child {
     display: flex;
 }
 
-main section article:last-child{
+main section article:last-child {
     margin: 3% 8%;
     max-width: 1280px;
 }
@@ -351,13 +394,25 @@ button>img {
     display: block;
 }
 
+.Work2 div:last-child {
+    display: block;
+    text-align: right;
+}
+
+.Work2 div button {
+    border-radius: 0%;
+    height: 160px;
+    margin: -71px 250px 140px;
+    max-width: 180px;
+    text-transform: uppercase;
+    padding: 12px;
+}
+
 .img {
     width: 376px;
     height: 241px;
     background: #D9D9D9;
 }
-
-.Blog {}
 
 .Blog>div {
     display: inline-flex;
@@ -382,4 +437,13 @@ button>img {
 .Blog h1 {
     font-size: 24px;
     margin: 20px 0;
+}
+
+footer section article>h1 {
+    font-size: 60px;
+}
+
+hr {
+    width: 90%;
+    mix-blend-mode: soft-light;
 }
