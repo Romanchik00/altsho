@@ -1,3 +1,15 @@
+html {
+    max-width: 1440px;
+    min-width: 320px;
+    margin: auto;
+}
+
+@media (max-width: 960px) {
+    html {
+        width: fit-content;
+    }
+}
+
 .back {
     background-color: #006277;
 }
@@ -205,7 +217,7 @@ a {
 }
 
 .BHF {
-    font-size: 70px;
+    font-size: min(calc(24px + 4vw), 70px);
 }
 
 #Services {
