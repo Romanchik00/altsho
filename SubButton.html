@@ -1,114 +1,124 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Простое модальное окно</title>
-        <style>
-            .modalwin {
-                height: 200px;
-                width: 300px;
-                border: 3px outset gray;
-                background: wheat;
-                top: 20%; /* отступ сверху */
-                right: 0;
-                left: 0;
-                font-size: 14px;
-                margin: 0 auto;
-                z-index:2; /* поверх всех */
-                display: none;  /* сначала невидим */
-                position: fixed; /* фиксированное позиционирование, окно стабильно при прокрутке */
-                padding: 15px;
-                border: 1px solid #383838;
-            }
-            #shadow {
-                position: fixed;
-                width:100%;
-                height:100%;
-                z-index:1; /* поверх всех  кроме окна*/
-                background:#000;
-                opacity: 0.5; /*прозрачность*/
-                left:0;
-                top:0;
-            }
-        </style>
-        <script type="text/javascript">
-            function showModalWin() {
 
-                var darkLayer = document.createElement('div'); // слой затемнения
-                darkLayer.id = 'shadow'; // id чтобы подхватить стиль
-                document.body.appendChild(darkLayer); // включаем затемнение
+<head>
+  <meta charset="UTF-8">
+  <title>Простое модальное окно</title>
+  <style>
+    .modalwin {
+      height: 200px;
+      width: 300px;
+      border: 3px outset gray;
+      background: wheat;
+      top: 20%;
+      /* отступ сверху */
+      right: 0;
+      left: 0;
+      font-size: 14px;
+      margin: 0 auto;
+      z-index: 2;
+      /* поверх всех */
+      display: none;
+      /* сначала невидим */
+      position: fixed;
+      /* фиксированное позиционирование, окно стабильно при прокрутке */
+      padding: 15px;
+      border: 1px solid #383838;
+    }
 
-                var modalWin = document.getElementById('popupWin'); // находим наше "окно"
-                modalWin.style.display = 'block'; // "включаем" его
+    #shadow {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      /* поверх всех  кроме окна*/
+      background: #000;
+      opacity: 0.5;
+      /*прозрачность*/
+      left: 0;
+      top: 0;
+    }
+  </style>
+  <script type="text/javascript">
+    function showModalWin() {
 
-                darkLayer.onclick = function () {  // при клике на слой затемнения все исчезнет
-                    darkLayer.parentNode.removeChild(darkLayer); // удаляем затемнение
-                    modalWin.style.display = 'none'; // делаем окно невидимым
-                    return false;
-                };
-            }
-        </script>
+      var darkLayer = document.createElement('div'); // слой затемнения
+      darkLayer.id = 'shadow'; // id чтобы подхватить стиль
+      document.body.appendChild(darkLayer); // включаем затемнение
 
-    </head>
-    <body style="text-align: center">
-        <h1> Веб-страница </h1>
-        <form>
-            <input type="button" value="Вызвать окно" onclick="showModalWin()">
-        </form>
-        <!-- Наше модальное всплывающее окно -->
-        <div style="text-align: center" id="popupWin" class="modalwin">
-            <h2> Какая-то форма </h2>
-            <form>
-              <div>
-                <label>full name
-                    <input name="fullName" placeholder="John Smith" required />
-                </label>
-              </div>
-              <div>
-                <label for="email">email</label>
-                <input id="email" type="email" required name="email" />
-              </div>
-              <div>
-                <label for="tel.">tel.number</label>
-                <input id="tel" type="tel" placeholder="+x(xxx) xxx-xx-xx" required />
-              </div>
-                  <input type="checkbox" name="agree1" required />HTML
-                  <input type="checkbox" name="agree2" required />CSS
-                  <input type="checkbox" name="agree3" required />JS
-              <input type="hidden" name="code" value="823yuh43">
-              <div>
-                <input type="checkbox" name="agree" required />
-                <label>I agree with the <a href="#">policy *</a></label>
-              </div>
-              <button type="submit" id="subbut">Submit</button>
-            </form>
-            <hr>
+      var modalWin = document.getElementById('popupWin'); // находим наше "окно"
+      modalWin.style.display = 'block'; // "включаем" его
+
+      darkLayer.onclick = function () {  // при клике на слой затемнения все исчезнет
+        darkLayer.parentNode.removeChild(darkLayer); // удаляем затемнение
+        modalWin.style.display = 'none'; // делаем окно невидимым
+        return false;
+      };
+    }
+  </script>
+
+</head>
+
+<body style="text-align: center">
+  <h1> Веб-страница </h1>
+  <form>
+    <input type="button" value="Вызвать окно" onclick="showModalWin()">
+  </form>
+  <!-- Наше модальное всплывающее окно -->
+  <form>
+    <div style="text-align: center" id="popupWin" class="modalwin">
+      <h2> Какая-то форма </h2>
+      <form>
+        <div>
+          <label for="fullName">Full name</label>
+          <input id="fullName" placeholder="John Smith" required />
         </div>
-    </body>
-  <footer>
-    <script type="text/javascript">
-            function showModalWin() {
+        <div>
+          <label for="email">email</label>
+          <input id="email" type="email" required name="email" />
+        </div>
+        <div>
+          <label for="tel">tel.number</label>
+          <input id="tel" type="tel" placeholder="+x(xxx) xxx-xx-xx" required />
+        </div>
+        <input type="checkbox" name="agree1" />HTML
+        <input type="checkbox" name="agree2" />CSS
+        <input type="checkbox" name="agree3" />JS
+        <input type="hidden" name="code" value="823yuh43">
+        <div>
+          <input type="checkbox" name="agree" required />
+          <label>I agree with the <a href="#">policy *</a></label>
+        </div>
+        <button type="submit" id="subbut">Submit</button>
+      </form>
+      <hr>
+    </div>
+</body>
+<footer>
+  <script type="text/javascript">
+    function showModalWin() {
 
-                var darkLayer = document.createElement('div'); // слой затемнения
-                darkLayer.id = 'shadow'; // id чтобы подхватить стиль
-                document.body.appendChild(darkLayer); // включаем затемнение
+      var darkLayer = document.createElement('div'); // слой затемнения
+      darkLayer.id = 'shadow'; // id чтобы подхватить стиль
+      document.body.appendChild(darkLayer); // включаем затемнение
 
-                var modalWin = document.getElementById('popupWin'); // находим наше "окно"
-                modalWin.style.display = 'block'; // "включаем" его
+      var modalWin = document.getElementById('popupWin'); // находим наше "окно"
+      modalWin.style.display = 'block'; // "включаем" его
 
-                darkLayer.onclick = function () {  // при клике на слой затемнения все исчезнет
-                    darkLayer.parentNode.removeChild(darkLayer); // удаляем затемнение
-                    modalWin.style.display = 'none'; // делаем окно невидимым
-                  return false;
-                };
-                  var subcribeButton = document.getElementById('subbut');
-                 subcribeButton.onclick = function () {
-                    darkLayer.parentNode.removeChild(darkLayer); // удаляем затемнение
-                    modalWin.style.display = 'none'; // делаем окно невидимым
-                   alert("You subcribe");
-                   return false;
-                };
-            }
-        </script>
-  </footer>
+      darkLayer.onclick = function () {  // при клике на слой затемнения все исчезнет
+        darkLayer.parentNode.removeChild(darkLayer); // удаляем затемнение
+        modalWin.style.display = 'none'; // делаем окно невидимым
+        return false;
+      };
+      var subcribeButton = document.getElementById('subbut');
+      subcribeButton.onclick = function () {
+        darkLayer.parentNode.removeChild(darkLayer); // удаляем затемнение
+        modalWin.style.display = 'none'; // делаем окно невидимым
+        alert("You subcribe");
+        return false;
+      };
+    }
+  </script>
+</footer>
+
 </html>

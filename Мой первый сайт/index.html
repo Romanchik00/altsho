@@ -277,15 +277,33 @@
                         <a href="">GitHub</a>
                     </div>
                     <div>
-                        <p>Subscribe to my weekly newsletter</p>
+                        <label for="submit">Subscribe to my weekly newsletter</label>
+                        <button type="submit" onclick="showModalWin()">Submit</button>
                     </div>
+                    <form novalidate>
+                        <div style="text-align: center" id="popupWin" class="modalwin">
+                          <form>
+                            <div>
+                              <label for="fullName">Full name</label>
+                              <input id="fullName" type="fullName" placeholder="John Smith" required />
+                            </div>
+                            <div>
+                              <label for="email">email</label>
+                              <input id="email" type="email" required name="email" />
+                            </div>
+                            <div>
+                              <label for="tel">tel.number</label>
+                              <input id="tel" type="tel" placeholder="+x(xxx) xxx-xx-xx" required />
+                            </div>
+                            <button type="submit" id="subbut">Submit</button>
+                          </form>
                 </address>
                 <hr>
                 <h5> © Powered by Roman, 2022</h5>
                 <br>
             </article>
         </section>
-
+        <script src="script.js"></script>
     </footer>
 </body>
 
